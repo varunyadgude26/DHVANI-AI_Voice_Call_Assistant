@@ -138,7 +138,6 @@ def make_call(to: str = Query(...)):
     )
     return {"message": f"Call initiated with SID: {call.sid}"}
 
-
 @router.api_route("/incomming-call", methods=["GET", "POST"])
 async def handle_incoming_call(request: Request):
     response = VoiceResponse()
